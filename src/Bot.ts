@@ -11,7 +11,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on("message", (message: Message) => {
+client.on("message", async (message: Message) => {
   const prefix = process.env.PREFIX;
 
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -25,7 +25,18 @@ client.on("message", (message: Message) => {
   }
 
   if (command === "beep") {
-    message.reply("Boop 🤖");
+    message.reply("🤖 Boop");
+  }
+
+  if (command === "poll") {
+    try {
+      let title = message.content.slice(prefix.length + command.length);
+      let reply = await message.channel.send(`:ballot_box: ${title}`);
+      await reply.react("👍");
+      await reply.react("👎");
+    } catch (err) {
+      console.log(err);
+    }
   }
 });
 
