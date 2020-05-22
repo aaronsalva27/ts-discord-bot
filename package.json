@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/Bot.js",
     "build": "tsc",
-    "dev_start": "npm run build -- -w"
+    "dev_start": "npm run build -- -w",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
