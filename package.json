@@ -15,5 +15,6 @@
     "@types/node": "^14.0.4",
     "discord.js": "github:discordjs/discord.js",
     "dotenv": "^8.2.0"
-  }
+  },
+  "devDependencies": {}
 }
