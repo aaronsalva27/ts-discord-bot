@@ -23,6 +23,10 @@ client.on("message", (message: Message) => {
     let ping = Date.now() - message.createdTimestamp;
     message.reply("🏓 Your ping is `" + `${ping}` + " ms`");
   }
+
+  if (command === "beep") {
+    message.reply("Boop 🤖");
+  }
 });
 
 client.login(process.env.TOKEN);
