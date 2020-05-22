@@ -1,7 +1,6 @@
 import * as dotenv from "dotenv";
 import { Client, Message } from "discord.js";
 
-
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
@@ -21,8 +20,11 @@ client.on("message", (message: Message) => {
   const command = args.shift().toLowerCase();
 
   if (command === "ping") {
-    message.reply("Pong!")
+    let ping = Date.now() - message.createdTimestamp + " ms";
+    message.reply("🏓 Your ping is `" + `${ping}` + " ms`");
   }
+
+
 });
 
 client.login(process.env.TOKEN)
