@@ -1,7 +1,10 @@
 import * as dotenv from "dotenv";
 import { Client, Message } from "discord.js";
 
-dotenv.config();
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
 
 const client = new Client()
 
