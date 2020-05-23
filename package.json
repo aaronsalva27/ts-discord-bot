@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/Bot.js",
+    "start": "node dist/index.js",
     "build": "tsc",
     "dev_start": "npm run build -- -w",
     "postinstall": "npm run build"
@@ -15,6 +15,7 @@
   "dependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/node": "^14.0.4",
+    "discord-akairo": "^8.0.0",
     "discord.js": "github:discordjs/discord.js",
     "dotenv": "^8.2.0",
     "typescript": "^3.9.3"
