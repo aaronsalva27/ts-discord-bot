@@ -13,8 +13,7 @@ export default class KickCommand extends Command {
     const member = message.guild.member(user);
 
     if (member) {
-      await member.kick();
-      return message.channel.send("Por espabilado");
+      return message.channel.send("Que noooo maricón");
     }
   }
 }
